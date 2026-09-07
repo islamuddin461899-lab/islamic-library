@@ -1,0 +1,1943 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ইসলামিক লাইব্রেরী - Islamic Library & Bengali Captions</title>
+  <meta name="description" content="ইসলামিক লাইব্রেরী - কুরআন, হাদিস, সীরাত, ইসলামিক বই ও সুন্দর বাংলা ইসলামিক ক্যাপশন ও স্ট্যাটাস সংকলন।">
+  
+  <!-- Google Fonts: Hind Siliguri & Amiri for Arabic Calligraphy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #0d5c3a;
+      --primary-dark: #083c26;
+      --primary-light: #168a57;
+      --accent-gold: #c69214;
+      --accent-gold-light: #f5df97;
+      --bg-main: #f8faf8;
+      --bg-card: #ffffff;
+      --text-main: #1c2e24;
+      --text-muted: #53695d;
+      --border-color: #e2ebe5;
+      --shadow-sm: 0 2px 8px rgba(13, 92, 58, 0.06);
+      --shadow-md: 0 4px 16px rgba(13, 92, 58, 0.10);
+      --shadow-lg: 0 10px 30px rgba(13, 92, 58, 0.15);
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --nav-height: 64px;
+    }
+
+    [data-theme="dark"] {
+      --primary: #1ba369;
+      --primary-dark: #0a462b;
+      --primary-light: #24bd7c;
+      --accent-gold: #e2aa28;
+      --accent-gold-light: #443410;
+      --bg-main: #111a15;
+      --bg-card: #18261f;
+      --text-main: #e8f3ed;
+      --text-muted: #95b3a2;
+      --border-color: #243b2f;
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Hind Siliguri', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      padding-bottom: 80px; /* Space for mobile nav */
+    }
+
+    /* Arabic Calligraphy Style */
+    .arabic {
+      font-family: 'Amiri', serif;
+      direction: rtl;
+      font-size: 1.35rem;
+      line-height: 2;
+      color: var(--accent-gold);
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Top Header */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #ffffff;
+      padding: 16px 0 20px 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1.5px solid var(--accent-gold);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .brand-text h1 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      line-height: 1.2;
+      color: #ffffff;
+    }
+
+    .brand-text p {
+      font-size: 0.75rem;
+      color: var(--accent-gold-light);
+      font-weight: 400;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-btn {
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: #ffffff;
+      width: 38px;
+      height: 38px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.2s;
+    }
+
+    .icon-btn:hover {
+      background: rgba(255, 255, 255, 0.25);
+      transform: translateY(-1px);
+    }
+
+    /* Live Search Box */
+    .search-wrapper {
+      position: relative;
+      margin-top: 6px;
+    }
+
+    .search-input {
+      width: 100%;
+      height: 46px;
+      background: #ffffff;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      padding: 0 42px 0 42px;
+      font-size: 0.95rem;
+      font-family: inherit;
+      color: #1a2920;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    [data-theme="dark"] .search-input {
+      background: #1e2e25;
+      color: #ffffff;
+      border-color: #2a4736;
+    }
+
+    .search-input:focus {
+      border-color: var(--accent-gold);
+      box-shadow: 0 4px 16px rgba(198, 146, 20, 0.25);
+    }
+
+    .search-icon-left {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #728c7f;
+      pointer-events: none;
+    }
+
+    .search-clear-btn {
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 18px;
+      color: #728c7f;
+      cursor: pointer;
+      display: none;
+      padding: 4px;
+    }
+
+    /* Hero / Daily Ayah Card */
+    .hero-section {
+      padding: 16px 0 8px 0;
+    }
+
+    .ayah-card {
+      background: linear-gradient(135deg, rgba(13, 92, 58, 0.08), rgba(198, 146, 20, 0.12));
+      border: 1.5px dashed var(--accent-gold);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    [data-theme="dark"] .ayah-card {
+      background: linear-gradient(135deg, rgba(27, 163, 105, 0.1), rgba(226, 170, 40, 0.1));
+    }
+
+    .ayah-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--accent-gold);
+      color: #ffffff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 3px 12px;
+      border-radius: 20px;
+      margin-bottom: 8px;
+    }
+
+    .ayah-text-bn {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-main);
+      margin: 8px 0;
+    }
+
+    .ayah-ref {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .ayah-copy-btn {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--primary);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    .ayah-copy-btn:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    /* Tabs Navigation */
+    .tabs-nav {
+      display: flex;
+      gap: 8px;
+      border-bottom: 2px solid var(--border-color);
+      padding-top: 12px;
+      margin-bottom: 16px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .tabs-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab-btn {
+      padding: 10px 18px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      margin-bottom: -2px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-btn .badge-count {
+      background: var(--border-color);
+      color: var(--text-main);
+      font-size: 0.7rem;
+      padding: 1px 7px;
+      border-radius: 12px;
+    }
+
+    .tab-btn.active .badge-count {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    /* Category Filter Chips */
+    .categories-wrapper {
+      margin-bottom: 16px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 6px;
+      scrollbar-width: none;
+    }
+
+    .categories-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+
+    .cat-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 25px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-main);
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .cat-chip:hover, .cat-chip.active {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+      transform: translateY(-1px);
+    }
+
+    /* Section Headers */
+    .section-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 14px 0 12px 0;
+    }
+
+    .section-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      background: var(--primary);
+      border-radius: 4px;
+      display: inline-block;
+    }
+
+    .section-count {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* Captions Grid */
+    .captions-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 680px) {
+      .captions-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .caption-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .caption-card:hover {
+      border-color: var(--primary-light);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .caption-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .caption-category {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary);
+      background: rgba(13, 92, 58, 0.08);
+      padding: 3px 10px;
+      border-radius: 12px;
+    }
+
+    [data-theme="dark"] .caption-category {
+      background: rgba(27, 163, 105, 0.15);
+      color: var(--primary-light);
+    }
+
+    .caption-arabic {
+      font-size: 1.15rem;
+      text-align: center;
+      margin-bottom: 8px;
+      color: var(--accent-gold);
+    }
+
+    .caption-body {
+      font-size: 0.96rem;
+      color: var(--text-main);
+      font-weight: 500;
+      line-height: 1.6;
+      margin-bottom: 12px;
+      white-space: pre-line;
+    }
+
+    .caption-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .caption-tag {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      background: var(--bg-main);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .caption-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+    }
+
+    .btn-copy {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.2s;
+    }
+
+    .btn-copy:hover {
+      background: var(--primary-dark);
+      transform: scale(1.02);
+    }
+
+    .btn-copy.copied {
+      background: #0e8a3a;
+    }
+
+    .action-icons-group {
+      display: flex;
+      gap: 6px;
+    }
+
+    .sub-icon-btn {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+
+    .sub-icon-btn:hover {
+      color: var(--primary);
+      border-color: var(--primary);
+    }
+
+    .sub-icon-btn.active {
+      color: #e53935;
+      background: rgba(229, 57, 53, 0.08);
+      border-color: rgba(229, 57, 53, 0.3);
+    }
+
+    /* Books Grid */
+    .books-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    @media (min-width: 600px) {
+      .books-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 960px) {
+      .books-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .book-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s;
+    }
+
+    .book-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--primary-light);
+    }
+
+    .book-cover-area {
+      height: 120px;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #ffffff;
+    }
+
+    .book-icon-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid var(--accent-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .book-badge-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: var(--accent-gold);
+      color: #ffffff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    .book-info {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
+
+    .book-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .book-author {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .book-meta {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .book-meta span {
+      background: var(--bg-main);
+      padding: 2px 8px;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .book-desc {
+      font-size: 0.88rem;
+      color: var(--text-main);
+      line-height: 1.5;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-card-actions {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 12px;
+      margin-top: auto;
+    }
+
+    .btn-read {
+      flex: 1;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn-read:hover {
+      background: var(--primary-dark);
+    }
+
+    .btn-secondary {
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: inherit;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Tasbeeh Counter Section */
+    .tasbeeh-card {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .tasbeeh-phrase {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .tasbeeh-meaning {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .tasbeeh-circle {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px auto;
+      cursor: pointer;
+      user-select: none;
+      box-shadow: 0 10px 25px rgba(13, 92, 58, 0.35);
+      transition: all 0.15s;
+    }
+
+    .tasbeeh-circle:active {
+      transform: scale(0.95);
+    }
+
+    .tasbeeh-count {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .tasbeeh-label {
+      font-size: 0.8rem;
+      opacity: 0.85;
+      margin-top: 4px;
+    }
+
+    .tasbeeh-controls {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    /* Modal Sheet */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 200;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 650px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: modalSlide 0.25s ease-out;
+    }
+
+    @keyframes modalSlide {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--bg-main);
+      border: 1px solid var(--border-color);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--text-main);
+    }
+
+    .modal-body {
+      margin-top: 12px;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 84px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #1c2e24;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 999;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s;
+      border: 1px solid var(--accent-gold);
+    }
+
+    .toast-container.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-6px);
+    }
+
+    /* Mobile Bottom Navigation Bar */
+    .mobile-bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      background: var(--bg-card);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 150;
+      box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.06);
+    }
+
+    .nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      gap: 3px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      font-family: inherit;
+      padding: 6px 12px;
+      border-radius: 10px;
+      transition: all 0.2s;
+    }
+
+    .nav-item .nav-icon {
+      font-size: 20px;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+    }
+
+    .nav-item.active .nav-icon {
+      transform: translateY(-2px);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 40px 16px;
+      color: var(--text-muted);
+    }
+
+    .empty-state-icon {
+      font-size: 48px;
+      margin-bottom: 12px;
+      opacity: 0.7;
+    }
+
+    /* Footer info */
+    footer {
+      text-align: center;
+      padding: 24px 16px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border-color);
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top App Header -->
+  <header>
+    <div class="container">
+      <div class="header-top">
+        <a href="#" class="brand">
+          <div class="brand-icon">📖</div>
+          <div class="brand-text">
+            <h1>ইসলামিক লাইব্রেরী</h1>
+            <p>বই, হাদিস ও ইসলামিক ক্যাপশন সংকলন</p>
+          </div>
+        </a>
+        <div class="header-actions">
+          <button class="icon-btn" id="themeToggle" title="থিম পরিবর্তন" aria-label="Toggle Theme">
+            🌓
+          </button>
+          <button class="icon-btn" id="shareWebsiteBtn" title="অ্যাপ শেয়ার করুন" aria-label="Share">
+            🔗
+          </button>
+        </div>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div class="search-wrapper">
+        <span class="search-icon-left">🔍</span>
+        <input 
+          type="text" 
+          id="globalSearchInput" 
+          class="search-input" 
+          placeholder="বইয়ের নাম, লেখক বা ক্যাপশন খুঁজুন..." 
+          autocomplete="off"
+        >
+        <button id="clearSearchBtn" class="search-clear-btn" aria-label="Clear Search">✕</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Body Content -->
+  <main class="container">
+
+    <!-- Hero / Daily Ayah & Hadith Card -->
+    <section class="hero-section">
+      <div class="ayah-card">
+        <div class="ayah-badge">✨ আজকের নির্বাচিত আয়াত</div>
+        <div class="arabic">فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ</div>
+        <div class="ayah-text-bn" id="dailyAyahText">
+          "অতএব তোমরা আমাকে স্মরণ কর, আমিও তোমাদেরকে স্মরণ করব। আর তোমরা আমার প্রতি কৃতজ্ঞ হও এবং অকৃতজ্ঞ হয়ো না।"
+        </div>
+        <div class="ayah-ref" id="dailyAyahRef">— সূরা আল-বাকারা: ১৫২</div>
+        <button class="ayah-copy-btn" id="copyDailyAyahBtn">
+          📋 ক্যাপশনটি কপি করুন
+        </button>
+      </div>
+    </section>
+
+    <!-- Top Tabs (ক্যাপশনসমূহ | বইসমূহ | ডিজিটাল তাসবীহ | প্রিয় তালিকা) -->
+    <nav class="tabs-nav" id="mainTabsNav">
+      <button class="tab-btn active" data-tab="captions">
+        💬 ইসলামিক ক্যাপশন <span class="badge-count" id="captionCountBadge">০</span>
+      </button>
+      <button class="tab-btn" data-tab="books">
+        📚 কিতাব ও বইসমূহ <span class="badge-count" id="bookCountBadge">০</span>
+      </button>
+      <button class="tab-btn" data-tab="tasbeeh">
+        📿 ডিজিটাল তাসবীহ
+      </button>
+      <button class="tab-btn" data-tab="favorites">
+        ❤️ প্রিয় তালিকা <span class="badge-count" id="favCountBadge">০</span>
+      </button>
+    </nav>
+
+    <!-- Category Filter Chips -->
+    <section class="categories-wrapper" id="categoriesChipsContainer">
+      <!-- Generated via JS -->
+    </section>
+
+    <!-- VIEW 1: CAPTIONS SECTION -->
+    <section id="viewCaptions">
+      <div class="section-title-row">
+        <h2 class="section-title">ইসলামিক ক্যাপশন ও স্ট্যাটাস</h2>
+        <span class="section-count" id="filteredCaptionCount"></span>
+      </div>
+
+      <div class="captions-grid" id="captionsContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- VIEW 2: BOOKS SECTION -->
+    <section id="viewBooks" style="display: none;">
+      <div class="section-title-row">
+        <h2 class="section-title">ইসলামিক কিতাব ও গ্রন্থাবলী</h2>
+        <span class="section-count" id="filteredBookCount"></span>
+      </div>
+
+      <div class="books-grid" id="booksContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+    <!-- VIEW 3: TASBEEH COUNTER SECTION -->
+    <section id="viewTasbeeh" style="display: none;">
+      <div class="section-title-row">
+        <h2 class="section-title">ডিজিটাল তাসবীহ ও যিকির</h2>
+      </div>
+
+      <div class="tasbeeh-card">
+        <div class="arabic" id="tasbeehArabic">سُبْحَانَ اللَّهِ</div>
+        <div class="tasbeeh-phrase" id="tasbeehPhrase">সুবহানাল্লাহ</div>
+        <div class="tasbeeh-meaning" id="tasbeehMeaning">আল্লাহ পবিত্র ও সকল ত্রুটিমুক্ত</div>
+
+        <!-- Interactive Tap Circle -->
+        <div class="tasbeeh-circle" id="tasbeehBtn">
+          <div class="tasbeeh-count" id="tasbeehCountDisplay">0</div>
+          <div class="tasbeeh-label">ট্যাপ করুন</div>
+        </div>
+
+        <div class="tasbeeh-controls">
+          <button class="btn-secondary" id="tasbeehResetBtn">🔄 রিসেট</button>
+          <button class="btn-secondary" id="tasbeehChangeDuaBtn">🔁 দুআ পরিবর্তন</button>
+          <button class="btn-copy" id="tasbeehCopyDuaBtn">📋 যিকির কপি করুন</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIEW 4: FAVORITES SECTION -->
+    <section id="viewFavorites" style="display: none;">
+      <div class="section-title-row">
+        <h2 class="section-title">আপনার সংরক্ষিত প্রিয় সংগ্রহ</h2>
+        <span class="section-count" id="savedItemsCount">০ টি আইটেম</span>
+      </div>
+
+      <div id="favoritesContainer">
+        <!-- Rendered by JS -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Book Details & Reader Modal -->
+  <div class="modal-overlay" id="bookModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeModalBtn">✕</button>
+      <div class="modal-body" id="bookModalBody">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Message -->
+  <div class="toast-container" id="toast">
+    <span>✓</span> <span id="toastMessage">কপিকৃত হয়েছে!</span>
+  </div>
+
+  <!-- Mobile Fixed Bottom Navigation -->
+  <footer class="mobile-bottom-nav">
+    <button class="nav-item active" data-target="captions">
+      <span class="nav-icon">💬</span>
+      <span>ক্যাপশন</span>
+    </button>
+    <button class="nav-item" data-target="books">
+      <span class="nav-icon">📚</span>
+      <span>বইসমূহ</span>
+    </button>
+    <button class="nav-item" data-target="tasbeeh">
+      <span class="nav-icon">📿</span>
+      <span>তাসবীহ</span>
+    </button>
+    <button class="nav-item" data-target="favorites">
+      <span class="nav-icon">❤️</span>
+      <span>সংরক্ষিত</span>
+    </button>
+  </footer>
+
+  <!-- Single-File JavaScript -->
+  <script>
+    /* ==========================================================
+       1. DATA LAYER: BENGALI CAPTIONS & ISLAMIC BOOKS
+       ========================================================== */
+    const ISLAMIC_CAPTIONS = [
+      {
+        id: "c1",
+        category: "ধৈর্য ও তাওয়াক্কুল",
+        arabic: "إِنَّ مَعَ الْعُسْرِ يُسْرًا",
+        text: "নিশ্চয়ই কষ্টের সাথেই রয়েছে অপার স্বস্তি।\n\nজীবনের কঠিন সময়গুলোতে ভেঙে পড়বেন না; রব যখন পরীক্ষা নেন, তখন তিনি সুন্দর প্রতিদানের পথও প্রস্তুত রাখেন। ভরসা রাখুন একমাত্র মহান আল্লাহর ওপর। 🤍",
+        tags: ["#ধৈর্য", "#তাওয়াক্কুল", "#আল্লাহর_রহমত"],
+        likes: 124
+      },
+      {
+        id: "c2",
+        category: "জুম্মা মোবারক",
+        arabic: "يَا أَيُّهَا الَّذِينَ آمَنُوا إِذَا نُودِيَ لِلصَّلَاةِ",
+        text: "আসসালামু আলাইকুম। বরকতময় জুম্মার শুভেচ্ছা। 🌿\n\nহে আল্লাহ! আজকের এই পবিত্র দিনে আমাদের সকল নেক দোয়া কবুল করুন, পাপগুলো ক্ষমা করে দিন এবং আমাদের পরিবারে অফুরন্ত শান্তি ও সুস্থতা দান করুন। আমিন।\n\n— সূরা কাহাফ তিলাওয়াত ও বেশি বেশি দরূদ পাঠের সুন্নাহ মনে করিয়ে দিচ্ছি।",
+        tags: ["#জুম্মা_মোবারক", "#দরূদ_শরীফ", "#সুন্নাহ"],
+        likes: 210
+      },
+      {
+        id: "c3",
+        category: "শোকর আলহামদুলিল্লাহ",
+        arabic: "الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ",
+        text: "আলহামদুলিল্লাহ! পাওয়া না পাওয়া সবকিছুতেই আল্লাহর শোকর।\n\nতিনি যা দেন তা তাঁর অসীম অনুগ্রহ, আর যা দেন না তা তাঁর বিশেষ হেকমত। হৃদয়ের প্রশান্তি লুকিয়ে থাকে আল্লাহর ফয়সালায় সন্তুষ্ট থাকার মাঝে। 🌸",
+        tags: ["#আলহামদুলিল্লাহ", "#শোকরগুজার", "#জীবন"],
+        likes: 185
+      },
+      {
+        id: "c4",
+        category: "তাওবাহ ও ক্ষমা",
+        arabic: "رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا",
+        text: "গুনাহ যত বড়ই হোক না কেন, আল্লাহর রহমত তার চেয়েও কোটি গুণ বড়।\n\n'হে আমার বান্দাগণ! যারা নিজেদের ওপর অবিচার করেছ, তোমরা আল্লাহর অনুগ্রহ থেকে কখনো নিরাশ হয়ো না।' চোখের এক ফোঁটা তওবার পানি মুছে দিতে পারে জীবনের শত ভুলের দাগ। 🤲",
+        tags: ["#তাওবাহ", "#ক্ষমা", "#মুনাজাত"],
+        likes: 160
+      },
+      {
+        id: "c5",
+        category: "নামাজ ও সালাত",
+        arabic: "إِنَّ الصَّلَاةَ تَنْهَىٰ عَنِ الْفَحْشَاءِ وَالْمُنكَرِ",
+        text: "ক্লান্তির মাঝেও সিজদাহয় মাথা নোয়ানো মানুষ কখনো ভেতর থেকে পরাজিত হয় না।\n\nনামাজ শুধু একটি ইবাদত নয়, এটি হচ্ছে রবের সাথে বান্দার গভীরতম কথোপকথন। অস্থির পৃথিবীর সবচেয়ে নিরাপদ আশ্রয় হলো জায়নামাজ। 🕌",
+        tags: ["#নামাজ", "#সিজদাহ", "#আত্মশুদ্ধি"],
+        likes: 198
+      },
+      {
+        id: "c6",
+        category: "সৎ উপদেশ ও আখলাক",
+        arabic: "وَقُولُوا لِلنَّاسِ حُسْنًا",
+        text: "মানুষের সাথে সুন্দর ও উত্তম ভাষায় কথা বলো। (সূরা বাকারা: ৮৩)\n\nএকজন মুমিনের আসল সৌন্দর্য ফুটে ওঠে তার মিষ্টি ভাষা, নম্র আচরণ ও সুন্দর চরিত্রের মাধ্যমে। কাউকে ছোট করে নয়, ভালোবাসায় আপন করে নিন। 💐",
+        tags: ["#সুন্দর_আচরণ", "#আখলাক", "#সুন্নাত"],
+        likes: 142
+      },
+      {
+        id: "c7",
+        category: "ফজিলতপূর্ণ দুআ",
+        arabic: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً",
+        text: "হে আমাদের প্রতিপালক! আমাদেরকে দুনিয়াতেও কল্যাণ দান করুন এবং পরকালেও কল্যাণ দান করুন, আর আমাদেরকে জাহান্নামের আগুন থেকে রক্ষা করুন।\n\n(প্রতিদিন বেশি বেশি পাঠ করার মতো শ্রেষ্ঠ কুরআনি দুআ) 🤲",
+        tags: ["#কুরআনি_দোয়া", "#পরকাল", "#কল্যাণ"],
+        likes: 235
+      },
+      {
+        id: "c8",
+        category: "হাদিসের বাণী",
+        arabic: "خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",
+        text: "রাসূলুল্লাহ (সা.) বলেছেন:\n'তোমাদের মধ্যে সর্বোত্তম ব্যক্তি সেই, যে নিজে কুরআন শিখে এবং অন্যকে তা শেখায়।' (সহীহ বুখারী: ৫০২৭)\n\nপ্রতিদিন অন্তত একটি আয়াত হলেও কুরআন তিলাওয়াত ও বোঝার চেষ্টা করি। 📖",
+        tags: ["#হাদিস", "#কুরআন", "#বুখারী"],
+        likes: 177
+      },
+      {
+        id: "c9",
+        category: "ধৈর্য ও তাওয়াক্কুল",
+        arabic: "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+        text: "আল্লাহই আমাদের জন্য যথেষ্ট এবং তিনিই সর্বোত্তম কর্মবিধায়ক।\n\nযখন সব পথ বন্ধ মনে হবে, তখন মনে রাখবেন যিনি সাগর চিরে রাস্তা তৈরি করতে পারেন, তিনি আপনার জীবনেও সকল সমস্যার সমাধান করে দিতে পারেন। নিঃশঙ্ক চিত্তে তাঁর ওপর ভরসা রাখুন। 🌟",
+        tags: ["#তাওয়াক্কুল", "#ভরসা", "#সান্ত্বনা"],
+        likes: 190
+      }
+    ];
+
+    const ISLAMIC_BOOKS = [
+      {
+        id: "b1",
+        title: "সহীহ বুখারী শরীফ (সম্পূর্ণ খণ্ড)",
+        author: "ইমাম মুহাম্মদ ইবনে ইসমাইল বুখারী (রহ.)",
+        category: "হাদীস শরীফ",
+        size: "৭৫.০ MB",
+        pages: 3500,
+        rating: 5.0,
+        icon: "📜",
+        badge: "সর্বাধিক বিশুদ্ধ",
+        summary: "কুরআন মাজীদের পর পৃথিবীর বুকে সর্বাধিক বিশুদ্ধ ও নির্ভরযোগ্য কিতাব। ঈমান, সালাত, সাওম, যাকাত, হজ্ব, জিহাদ, ক্রয়-বিক্রয় সহ মানবজীবনের সর্বক্ষেত্রের সহীহ হাদিসের প্রামাণ্য বিশ্বকোষ।",
+        readSnippet: "১ম হাদিস: আলক্বামাহ ইবনু ওয়াক্কাস আল-লায়সী (রহ.) হতে বর্ণিত, আমি ‘উমার ইবনুল খাত্তাব (রা.)-কে মিম্বারের উপর দাঁড়িয়ে বলতে শুনেছি: আমি আল্লাহর রাসূল (সাল্লাল্লাহু ‘আলাইহি ওয়া সাল্লাম)-কে বলতে শুনেছিঃ প্রত্যেক কাজ নিয়তের ওপর নির্ভরশীল এবং প্রত্যেক মানুষ তার নিয়ত অনুযায়ীই প্রতিফল পাবে।"
+      },
+      {
+        id: "b2",
+        title: "তাফসীরে ইবনে কাসীর",
+        author: "আল্লামা ইমাদুদ্দীন ইবনে কাসীর (রহ.)",
+        category: "কুরআন ও তাফসীর",
+        size: "৪৫.০ MB",
+        pages: 2800,
+        rating: 4.9,
+        icon: "📖",
+        badge: "প্রামাণ্য তাফসীর",
+        summary: "কুরআন দ্বারা কুরআনের এবং সহীহ হাদিস ও আসারে সাহাবা দ্বারা কুরআন ব্যাখ্যার এক অতুলনীয় সংকলন। শতাব্দীর পর শতাব্দী ধরে বিশ্বব্যাপী আলেম ও সাধারণ পাঠকের প্রথম পছন্দ।",
+        readSnippet: "সূরা আল-ফাতিহা পরিচিতি: উম্মুল কুরআন বা কুরআনের জননী। এই সূরায় তাওহীদের মূল শিক্ষা, আল্লাহর প্রশংসা ও সার্বভৌমত্ব এবং বান্দার বিনীত প্রার্থনা অত্যন্ত সাবলীলভাবে সন্নিবেশিত হয়েছে।"
+      },
+      {
+        id: "b3",
+        title: "আর-রাহীকুল মাখতূম (মোহরাঙ্কিত জান্নাতী সুধা)",
+        author: "আল্লামা সফিউর রহমান মুবারকপুরী (রহ.)",
+        category: "সীরাতুন্নবী (সা.)",
+        size: "১২.৫ MB",
+        pages: 580,
+        rating: 5.0,
+        icon: "🌙",
+        badge: "বিশ্বসেরা সীরাত",
+        summary: "রাবেতায়ে আলমে ইসলামী কর্তৃক আয়োজিত সীরাতুন্নবী প্রতিযোগিতায় ১১৮২টি গ্রন্থের মধ্যে ১ম স্থান অধিকারী বিশ্ববিখ্যাত সীরাত গ্রন্থ। নবীজী (সা.)-এর পবিত্র জীবনের প্রামাণ্য ইতিহাস।",
+        readSnippet: "ভূমিকা: মুহাম্মদুর রাসূলুল্লাহ (সাল্লাল্লাহু আলাইহি ওয়া সাল্লাম)-এর পবিত্র জীবনালেখ্য মানবতার জন্য চিরন্তন আলোকবর্তিকা। জাহিলিয়্যাতের ঘোর অন্ধকারের মাঝে সত্যের আলো ছড়িয়ে দেওয়ার অবিনাশী ইতিহাস এই গ্রন্থ।"
+      },
+      {
+        id: "b4",
+        title: "হিসনুল মুসলিম (দৈনন্দিন দুআ ও যিকির)",
+        author: "ড. সাঈদ ইবনে আলী আল-কাহ্তানী",
+        category: "দুআ ও যিকির",
+        size: "৪.২ MB",
+        pages: 260,
+        rating: 4.9,
+        icon: "🤲",
+        badge: "নিত্যপ্রয়োজনীয়",
+        summary: "দৈনন্দিন সকাল-সন্ধ্যার জিকির, বিপদ-আপদের দুআ, নামাজ-পরবর্তী আযকার এবং জীবনের প্রতিটি মুহূর্তের জন্য কুরআন ও সুন্নাহ সম্মত বিশুদ্ধ দুআর সংকলন।",
+        readSnippet: "সকাল-সন্ধ্যার শ্রেষ্ঠ যিকির: 'আস্-সাবাহতু ওয়া আসবাহাল মুলকু লিল্লাহ, ওয়াল হামদুলিল্লাহ, লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু...' প্রতিদিন সকালে আল্লাহর নিরাপত্তা কামনার শ্রেষ্ঠ দোয়া।"
+      },
+      {
+        id: "b5",
+        title: "রিয়াযুস স্বা-লিহীন (সৎকর্মশীলদের বাগান)",
+        author: "ইমাম মুহিউদ্দীন আন-নববী (রহ.)",
+        category: "হাদীস শরীফ",
+        size: "১৮.০ MB",
+        pages: 950,
+        rating: 4.8,
+        icon: "🌿",
+        badge: "আমলমুখী হাদীস",
+        summary: "দৈনন্দিন জীবনে তাকওয়া, ইখলাস, ধৈর্য, সচ্চরিত্র গঠন ও আত্মশুদ্ধির লক্ষ্যে সাজানো প্রখ্যাত হাদিস সংকলন। ঘরে ঘরে পাঠ করার মতো অপূর্ব একটি কিতাব।",
+        readSnippet: "ইখলাস অধ্যায়: অন্তরের একাগ্রতা ছাড়া কোনো আমল কবুল হয় না। আল্লাহ বান্দার বাহ্যিক রূপ দেখেন না, বরং তিনি দেখেন তার অন্তরের সদিচ্ছা ও আমল।"
+      },
+      {
+        id: "b6",
+        title: "ফিকহুস সুন্নাহ (ইসলামিক জীবনবিধান)",
+        author: "সাইয়্যিদ সাবিক্ব (রহ.)",
+        category: "ফিকহ ও মাসায়েল",
+        size: "৩৫.০ MB",
+        pages: 1400,
+        rating: 4.7,
+        icon: "⚖️",
+        badge: "প্রামাণ্য ফিকহ",
+        summary: "সহজ ও সাবলীল ভাষায় কুরআন ও বিশুদ্ধ হাদিসের আলোকে তাহারাত, সালাত, সাওম, পরিবার ও লেনদেনের যাবতীয় ইসলামিক বিধিবিধান ও ফতোয়ার বিশ্বকোষ।",
+        readSnippet: "পবিত্রতা অধ্যায়: ইসলাম পরিচ্ছন্নতা ও আত্মশুদ্ধির উপর সর্বোচ্চ গুরুত্ব আরোপ করেছে। ওজু ও গোসলের সঠিক নিয়মাবলী ও সুন্নত তরিকাসমূহ বিশদভাবে বর্ণিত।"
+      }
+    ];
+
+    const TASBEEH_ITEMS = [
+      { arabic: "سُبْحَانَ اللَّهِ", phrase: "সুবহানাল্লাহ", meaning: "আল্লাহ পরম পবিত্র ও সকল ত্রুটিমুক্ত" },
+      { arabic: "الْحَمْدُ لِلَّهِ", phrase: "আলহামদুলিল্লাহ", meaning: "সমস্ত প্রশংসা একমাত্র আল্লাহর জন্য" },
+      { arabic: "اللَّهُ أَكْبَرُ", phrase: "আল্লাহু আকবার", meaning: "আল্লাহ সর্বশ্রেষ্ঠ ও মহান" },
+      { arabic: "أَسْتَغْفِرُ اللَّهَ", phrase: "আস্তাগফিরুল্লাহ", meaning: "আমি মহান আল্লাহর নিকট ক্ষমা প্রার্থনা করছি" },
+      { arabic: "لَا إِلَٰهَ إِلَّا اللَّهُ", phrase: "লা ইলাহা ইল্লাল্লাহ", meaning: "আল্লাহ ব্যতীত কোনো সত্য উপাস্য নেই" },
+      { arabic: "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ", phrase: "লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহ", meaning: "আল্লাহর সাহায্য ছাড়া পাপ থেকে বাঁচার ও নেক কাজ করার শক্তি নেই" }
+    ];
+
+    /* ==========================================================
+       2. APPLICATION STATE MANAGEMENT
+       ========================================================== */
+    let currentTab = "captions"; // 'captions', 'books', 'tasbeeh', 'favorites'
+    let currentCategory = "সকল";
+    let currentSearchTerm = "";
+    let tasbeehIndex = 0;
+    let tasbeehCount = 0;
+
+    // Favorites persistence in localStorage
+    let savedFavorites = {
+      captions: [],
+      books: []
+    };
+
+    function initFavorites() {
+      try {
+        const stored = localStorage.getItem("islamic_library_favs");
+        if (stored) {
+          savedFavorites = JSON.parse(stored);
+        }
+      } catch(e) {
+        console.warn("Storage error", e);
+      }
+      updateBadgeCounters();
+    }
+
+    function saveFavorites() {
+      try {
+        localStorage.setItem("islamic_library_favs", JSON.stringify(savedFavorites));
+      } catch(e) {}
+      updateBadgeCounters();
+    }
+
+    /* ==========================================================
+       3. UI RENDERING & FILTERING
+       ========================================================== */
+    function renderCategories() {
+      const container = document.getElementById("categoriesChipsContainer");
+      if (!container) return;
+
+      let categories = ["সকল"];
+
+      if (currentTab === "captions") {
+        const set = new Set(ISLAMIC_CAPTIONS.map(c => c.category));
+        categories = ["সকল", ...Array.from(set)];
+      } else if (currentTab === "books") {
+        const set = new Set(ISLAMIC_BOOKS.map(b => b.category));
+        categories = ["সকল", ...Array.from(set)];
+      } else {
+        container.innerHTML = "";
+        return;
+      }
+
+      container.innerHTML = categories.map(cat => `
+        <button class="cat-chip ${cat === currentCategory ? 'active' : ''}" onclick="selectCategory('${cat}')">
+          ${cat === 'সকল' ? '🌟' : '🏷️'} ${cat}
+        </button>
+      `).join("");
+    }
+
+    function selectCategory(cat) {
+      currentCategory = cat;
+      renderCategories();
+      if (currentTab === "captions") renderCaptions();
+      if (currentTab === "books") renderBooks();
+    }
+
+    function renderCaptions() {
+      const container = document.getElementById("captionsContainer");
+      const countDisplay = document.getElementById("filteredCaptionCount");
+      if (!container) return;
+
+      let list = ISLAMIC_CAPTIONS;
+
+      // Filter by category
+      if (currentCategory !== "সকল") {
+        list = list.filter(c => c.category === currentCategory);
+      }
+
+      // Filter by search
+      if (currentSearchTerm.trim()) {
+        const term = currentSearchTerm.toLowerCase();
+        list = list.filter(c => 
+          c.text.toLowerCase().includes(term) || 
+          c.category.toLowerCase().includes(term) ||
+          c.tags.some(t => t.toLowerCase().includes(term)) ||
+          (c.arabic && c.arabic.includes(term))
+        );
+      }
+
+      countDisplay.innerText = `${list.length} টি ক্যাপশন পাওয়া গেছে`;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">🔍</div>
+            <h3>কোনো ক্যাপশন পাওয়া যায়নি</h3>
+            <p>অন্য কোনো শব্দ বা ক্যাটাগরি বেছে নিন।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(caption => {
+        const isFav = savedFavorites.captions.includes(caption.id);
+        const copyText = `${caption.arabic ? caption.arabic + '\n\n' : ''}${caption.text}\n\n${caption.tags.join(' ')}\n\n[সংগৃহীত: ইসলামিক লাইব্রেরী]`;
+        const encodedText = encodeURIComponent(copyText);
+
+        return `
+          <div class="caption-card" id="card-${caption.id}">
+            <div>
+              <div class="caption-top">
+                <span class="caption-category">🏷️ ${caption.category}</span>
+                <button class="sub-icon-btn ${isFav ? 'active' : ''}" onclick="toggleFavCaption('${caption.id}')" title="প্রিয় তালিকায় রাখুন">
+                  ${isFav ? '❤️' : '🤍'}
+                </button>
+              </div>
+
+              ${caption.arabic ? `<div class="caption-arabic arabic">${caption.arabic}</div>` : ''}
+              <div class="caption-body">${escapeHtml(caption.text)}</div>
+
+              <div class="caption-tags">
+                ${caption.tags.map(t => `<span class="caption-tag">${t}</span>`).join("")}
+              </div>
+            </div>
+
+            <div class="caption-footer">
+              <button class="btn-copy" onclick="copyCaption('${caption.id}', this)" data-copy="${escapeAttribute(copyText)}">
+                📋 ক্যাপশন কপি করুন
+              </button>
+              <div class="action-icons-group">
+                <button class="sub-icon-btn" onclick="shareContent('${escapeAttribute(caption.text)}', 'ইসলামিক ক্যাপশন')" title="শেয়ার করুন">
+                  📤
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderBooks() {
+      const container = document.getElementById("booksContainer");
+      const countDisplay = document.getElementById("filteredBookCount");
+      if (!container) return;
+
+      let list = ISLAMIC_BOOKS;
+
+      if (currentCategory !== "সকল") {
+        list = list.filter(b => b.category === currentCategory);
+      }
+
+      if (currentSearchTerm.trim()) {
+        const term = currentSearchTerm.toLowerCase();
+        list = list.filter(b => 
+          b.title.toLowerCase().includes(term) || 
+          b.author.toLowerCase().includes(term) ||
+          b.category.toLowerCase().includes(term) ||
+          b.summary.toLowerCase().includes(term)
+        );
+      }
+
+      countDisplay.innerText = `${list.length} টি বই পাওয়া গেছে`;
+
+      if (list.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">📚</div>
+            <h3>কোনো বই পাওয়া যায়নি</h3>
+            <p>অনুগ্রহ করে অন্য শব্দ বা ক্যাটাগরি দিয়ে খুঁজুন।</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = list.map(book => {
+        const isFav = savedFavorites.books.includes(book.id);
+        const bookCopyText = `📖 বই: ${book.title}\n✍️ লেখক: ${book.author}\n🏷️ ক্যাটাগরি: ${book.category}\n📄 পৃষ্ঠা: ${book.pages} | সাইজ: ${book.size}\n\nসংক্ষিপ্ত বিবরণ:\n${book.summary}\n\n[ইসলামিক লাইব্রেরী]`;
+
+        return `
+          <div class="book-card">
+            <div class="book-cover-area">
+              <span class="book-badge-tag">${book.badge}</span>
+              <div class="book-icon-badge">${book.icon}</div>
+            </div>
+            <div class="book-info">
+              <div>
+                <h3 class="book-title">${escapeHtml(book.title)}</h3>
+                <p class="book-author">✍️ ${escapeHtml(book.author)}</p>
+                <div class="book-meta">
+                  <span>🏷️ ${book.category}</span>
+                  <span>📄 ${book.pages} পৃষ্ঠা</span>
+                  <span>💾 ${book.size}</span>
+                </div>
+                <p class="book-desc">${escapeHtml(book.summary)}</p>
+              </div>
+
+              <div class="book-card-actions">
+                <button class="btn-read" onclick="openBookModal('${book.id}')">
+                  📖 বিস্তারিত ও পড়ুন
+                </button>
+                <button class="btn-secondary" onclick="copyBookInfo('${book.id}', this)" data-copy="${escapeAttribute(bookCopyText)}" title="বইয়ের বিবরণ কপি করুন">
+                  📋 কপি
+                </button>
+                <button class="sub-icon-btn ${isFav ? 'active' : ''}" onclick="toggleFavBook('${book.id}')" title="বুকমার্ক">
+                  ${isFav ? '❤️' : '🤍'}
+                </button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function renderFavorites() {
+      const container = document.getElementById("favoritesContainer");
+      const countDisplay = document.getElementById("savedItemsCount");
+      if (!container) return;
+
+      const favCaptions = ISLAMIC_CAPTIONS.filter(c => savedFavorites.captions.includes(c.id));
+      const favBooks = ISLAMIC_BOOKS.filter(b => savedFavorites.books.includes(b.id));
+      const totalCount = favCaptions.length + favBooks.length;
+
+      countDisplay.innerText = `${totalCount} টি সংরক্ষিত আইটেম`;
+
+      if (totalCount === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="empty-state-icon">❤️</div>
+            <h3>আপনার প্রিয় তালিকা এখনো খালি</h3>
+            <p>যেকোনো ক্যাপশন বা বইয়ের হার্ট (❤️) আইকনে ক্লিক করে এখানে সহজে সংরক্ষণ করুন।</p>
+          </div>
+        `;
+        return;
+      }
+
+      let html = "";
+
+      if (favCaptions.length > 0) {
+        html += `<h3 style="margin: 12px 0 8px 0; font-size: 1.05rem;">💬 প্রিয় ক্যাপশনসমূহ (${favCaptions.length})</h3><div class="captions-grid" style="margin-bottom: 24px;">`;
+        html += favCaptions.map(c => {
+          const copyText = `${c.arabic ? c.arabic + '\n\n' : ''}${c.text}\n\n${c.tags.join(' ')}`;
+          return `
+            <div class="caption-card">
+              <div>
+                <div class="caption-top">
+                  <span class="caption-category">${c.category}</span>
+                  <button class="sub-icon-btn active" onclick="toggleFavCaption('${c.id}')">❤️</button>
+                </div>
+                ${c.arabic ? `<div class="caption-arabic arabic">${c.arabic}</div>` : ''}
+                <div class="caption-body">${escapeHtml(c.text)}</div>
+              </div>
+              <div class="caption-footer">
+                <button class="btn-copy" onclick="copyCaption('${c.id}', this)" data-copy="${escapeAttribute(copyText)}">📋 কপি করুন</button>
+              </div>
+            </div>
+          `;
+        }).join("");
+        html += `</div>`;
+      }
+
+      if (favBooks.length > 0) {
+        html += `<h3 style="margin: 12px 0 8px 0; font-size: 1.05rem;">📚 প্রিয় বইসমূহ (${favBooks.length})</h3><div class="books-grid">`;
+        html += favBooks.map(b => {
+          const bookCopyText = `📖 বই: ${b.title}\n✍️ লেখক: ${b.author}\n${b.summary}`;
+          return `
+            <div class="book-card">
+              <div class="book-cover-area">
+                <div class="book-icon-badge">${b.icon}</div>
+              </div>
+              <div class="book-info">
+                <h3 class="book-title">${escapeHtml(b.title)}</h3>
+                <p class="book-author">✍️ ${escapeHtml(b.author)}</p>
+                <div class="book-card-actions">
+                  <button class="btn-read" onclick="openBookModal('${b.id}')">📖 পড়ুন</button>
+                  <button class="btn-secondary" onclick="copyBookInfo('${b.id}', this)" data-copy="${escapeAttribute(bookCopyText)}">📋 কপি</button>
+                  <button class="sub-icon-btn active" onclick="toggleFavBook('${b.id}')">❤️</button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join("");
+        html += `</div>`;
+      }
+
+      container.innerHTML = html;
+    }
+
+    /* ==========================================================
+       4. TAB SWITCHING
+       ========================================================== */
+    function switchTab(tabId) {
+      currentTab = tabId;
+      currentCategory = "সকল";
+
+      // Toggle views
+      document.getElementById("viewCaptions").style.display = (tabId === "captions") ? "block" : "none";
+      document.getElementById("viewBooks").style.display = (tabId === "books") ? "block" : "none";
+      document.getElementById("viewTasbeeh").style.display = (tabId === "tasbeeh") ? "block" : "none";
+      document.getElementById("viewFavorites").style.display = (tabId === "favorites") ? "block" : "none";
+
+      // Top Tab buttons
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.toggle("active", btn.getAttribute("data-tab") === tabId);
+      });
+
+      // Bottom Nav items
+      document.querySelectorAll(".mobile-bottom-nav .nav-item").forEach(item => {
+        item.classList.toggle("active", item.getAttribute("data-target") === tabId);
+      });
+
+      renderCategories();
+
+      if (tabId === "captions") renderCaptions();
+      else if (tabId === "books") renderBooks();
+      else if (tabId === "favorites") renderFavorites();
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function updateBadgeCounters() {
+      document.getElementById("captionCountBadge").innerText = ISLAMIC_CAPTIONS.length;
+      document.getElementById("bookCountBadge").innerText = ISLAMIC_BOOKS.length;
+      const totalFav = savedFavorites.captions.length + savedFavorites.books.length;
+      document.getElementById("favCountBadge").innerText = totalFav;
+    }
+
+    /* ==========================================================
+       5. COPY TO CLIPBOARD & TOAST SYSTEM
+       ========================================================== */
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      const msgSpan = document.getElementById("toastMessage");
+      msgSpan.innerText = message;
+      toast.classList.add("show");
+      setTimeout(() => {
+        toast.classList.remove("show");
+      }, 2500);
+    }
+
+    function copyToClipboard(text, successMsg = "কপিকৃত হয়েছে! ✓", buttonEl = null) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          triggerSuccessUI(successMsg, buttonEl);
+        }).catch(() => {
+          fallbackCopyText(text, successMsg, buttonEl);
+        });
+      } else {
+        fallbackCopyText(text, successMsg, buttonEl);
+      }
+    }
+
+    function fallbackCopyText(text, successMsg, buttonEl) {
+      const textArea = document.createElement("textarea");
+      textArea.value = text;
+      textArea.style.position = "fixed";
+      textArea.style.left = "-999999px";
+      textArea.style.top = "-999999px";
+      document.body.appendChild(textArea);
+      textArea.focus();
+      textArea.select();
+      try {
+        document.execCommand('copy');
+        triggerSuccessUI(successMsg, buttonEl);
+      } catch (err) {
+        showToast("কপি করা যায়নি, অনুগ্রহ করে ম্যানুয়ালি কপি করুন");
+      }
+      document.body.removeChild(textArea);
+    }
+
+    function triggerSuccessUI(msg, btn) {
+      showToast(msg);
+      if (btn) {
+        const originalHtml = btn.innerHTML;
+        btn.classList.add("copied");
+        btn.innerHTML = "✓ কপি সম্পন্ন!";
+        setTimeout(() => {
+          btn.classList.remove("copied");
+          btn.innerHTML = originalHtml;
+        }, 2000);
+      }
+    }
+
+    function copyCaption(id, btn) {
+      const text = btn.getAttribute("data-copy");
+      copyToClipboard(text, "ক্যাপশন কপি হয়েছে! ফেসবুকে বা হোয়াটসঅ্যাপে পেস্ট করুন।", btn);
+    }
+
+    function copyBookInfo(id, btn) {
+      const text = btn.getAttribute("data-copy");
+      copyToClipboard(text, "বইয়ের তথ্য কপি হয়েছে! ✓", btn);
+    }
+
+    function toggleFavCaption(id) {
+      const index = savedFavorites.captions.indexOf(id);
+      if (index === -1) {
+        savedFavorites.captions.push(id);
+        showToast("ক্যাপশনটি প্রিয় তালিকায় যুক্ত হয়েছে ❤️");
+      } else {
+        savedFavorites.captions.splice(index, 1);
+        showToast("ক্যাপশনটি প্রিয় তালিকা থেকে সরানো হয়েছে");
+      }
+      saveFavorites();
+      if (currentTab === "captions") renderCaptions();
+      if (currentTab === "favorites") renderFavorites();
+    }
+
+    function toggleFavBook(id) {
+      const index = savedFavorites.books.indexOf(id);
+      if (index === -1) {
+        savedFavorites.books.push(id);
+        showToast("বইটি প্রিয় তালিকায় যুক্ত হয়েছে 📚");
+      } else {
+        savedFavorites.books.splice(index, 1);
+        showToast("বইটি প্রিয় তালিকা থেকে সরানো হয়েছে");
+      }
+      saveFavorites();
+      if (currentTab === "books") renderBooks();
+      if (currentTab === "favorites") renderFavorites();
+    }
+
+    function shareContent(text, title = "ইসলামিক লাইব্রেরী") {
+      if (navigator.share) {
+        navigator.share({
+          title: title,
+          text: text,
+          url: window.location.href
+        }).catch(() => {});
+      } else {
+        copyToClipboard(text, "লেখাটি ক্লিপবোর্ডে কপি করা হয়েছে। যে কাউকে পেস্ট করে পাঠাতে পারেন।");
+      }
+    }
+
+    /* ==========================================================
+       6. BOOK MODAL & READER
+       ========================================================== */
+    function openBookModal(bookId) {
+      const book = ISLAMIC_BOOKS.find(b => b.id === bookId);
+      if (!book) return;
+
+      const modalBody = document.getElementById("bookModalBody");
+      const bookCopyText = `📖 ${book.title}\n✍️ লেখক: ${book.author}\n🏷️ ক্যাটাগরি: ${book.category}\n\n${book.summary}\n\n[ইসলামিক লাইব্রেরী]`;
+
+      modalBody.innerHTML = `
+        <div style="text-align: center; margin-bottom: 16px;">
+          <div style="font-size: 44px; margin-bottom: 8px;">${book.icon}</div>
+          <h2 style="font-size: 1.35rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px;">${escapeHtml(book.title)}</h2>
+          <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem;">লেখক: ${escapeHtml(book.author)}</p>
+          <div style="display: flex; justify-content: center; gap: 8px; margin-top: 10px; font-size: 0.8rem; color: var(--text-muted);">
+            <span style="background: var(--bg-main); padding: 4px 10px; border-radius: 8px;">🏷️ ${book.category}</span>
+            <span style="background: var(--bg-main); padding: 4px 10px; border-radius: 8px;">📄 ${book.pages} পৃষ্ঠা</span>
+            <span style="background: var(--bg-main); padding: 4px 10px; border-radius: 8px;">💾 ${book.size}</span>
+          </div>
+        </div>
+
+        <div style="border-top: 1px solid var(--border-color); padding-top: 14px; margin-bottom: 16px;">
+          <h4 style="margin-bottom: 6px; font-size: 1rem; color: var(--primary);">বইটির পরিচিতি ও গুরুত্ব:</h4>
+          <p style="font-size: 0.95rem; line-height: 1.6; color: var(--text-main);">${escapeHtml(book.summary)}</p>
+        </div>
+
+        <div style="background: var(--bg-main); border: 1px dashed var(--border-color); border-radius: var(--radius-md); padding: 14px; margin-bottom: 18px;">
+          <h4 style="margin-bottom: 6px; font-size: 0.95rem; color: var(--accent-gold);">📖 নির্বাচিত পাঠ্যাংশ (নমুনা পৃষ্ঠা):</h4>
+          <p style="font-size: 0.92rem; line-height: 1.7; color: var(--text-main); font-style: italic;">
+            "${escapeHtml(book.readSnippet)}"
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn-copy" style="flex: 1;" onclick="copyToClipboard('${escapeAttribute(bookCopyText)}', 'বইয়ের তথ্য ও বিবরণ কপি হয়েছে! ✓')">
+            📋 বিবরণ কপি করুন
+          </button>
+          <button class="btn-secondary" style="flex: 1;" onclick="showToast('ডাউনলোড ফিচার শীঘ্রই যুক্ত হচ্ছে। অনলাইনে পড়তে থাকুন!')">
+            ⬇️ পিডিএফ সংগ্রহ
+          </button>
+        </div>
+      `;
+
+      document.getElementById("bookModal").classList.add("active");
+    }
+
+    function closeBookModal() {
+      document.getElementById("bookModal").classList.remove("active");
+    }
+
+    /* ==========================================================
+       7. TASBEEH COUNTER LOGIC
+       ========================================================== */
+    function updateTasbeehUI() {
+      const current = TASBEEH_ITEMS[tasbeehIndex];
+      document.getElementById("tasbeehArabic").innerText = current.arabic;
+      document.getElementById("tasbeehPhrase").innerText = current.phrase;
+      document.getElementById("tasbeehMeaning").innerText = current.meaning;
+      document.getElementById("tasbeehCountDisplay").innerText = tasbeehCount;
+    }
+
+    function incrementTasbeeh() {
+      tasbeehCount++;
+      document.getElementById("tasbeehCountDisplay").innerText = tasbeehCount;
+      if (navigator.vibrate) {
+        navigator.vibrate(25); // Subtle mobile tactile haptic feedback
+      }
+    }
+
+    function resetTasbeeh() {
+      tasbeehCount = 0;
+      updateTasbeehUI();
+      showToast("তাসবীহ কাউন্ট রিসেট হয়েছে (০)");
+    }
+
+    function changeTasbeehDua() {
+      tasbeehIndex = (tasbeehIndex + 1) % TASBEEH_ITEMS.length;
+      tasbeehCount = 0;
+      updateTasbeehUI();
+      showToast("পরবর্তী যিকির নির্বাচিত হয়েছে");
+    }
+
+    function copyTasbeehDua() {
+      const current = TASBEEH_ITEMS[tasbeehIndex];
+      const text = `${current.arabic}\n${current.phrase}\nঅর্থ: ${current.meaning}\n\n[সংগৃহীত: ইসলামিক লাইব্রেরী]`;
+      copyToClipboard(text, "যিকির ও অর্থ কপি হয়েছে! ✓");
+    }
+
+    /* ==========================================================
+       8. UTILITY HELPERS
+       ========================================================== */
+    function escapeHtml(string) {
+      if (!string) return '';
+      return String(string)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function escapeAttribute(string) {
+      if (!string) return '';
+      return String(string)
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;')
+        .replace(/\n/g, '&#10;');
+    }
+
+    /* ==========================================================
+       9. INITIALIZATION & EVENT LISTENERS
+       ========================================================== */
+    document.addEventListener("DOMContentLoaded", () => {
+      initFavorites();
+      renderCategories();
+      renderCaptions();
+      renderBooks();
+      updateTasbeehUI();
+
+      // Top Tabs click
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          switchTab(btn.getAttribute("data-tab"));
+        });
+      });
+
+      // Mobile Bottom Nav click
+      document.querySelectorAll(".mobile-bottom-nav .nav-item").forEach(item => {
+        item.addEventListener("click", () => {
+          switchTab(item.getAttribute("data-target"));
+        });
+      });
+
+      // Live search input
+      const searchInput = document.getElementById("globalSearchInput");
+      const clearBtn = document.getElementById("clearSearchBtn");
+
+      searchInput.addEventListener("input", (e) => {
+        currentSearchTerm = e.target.value;
+        clearBtn.style.display = currentSearchTerm ? "block" : "none";
+        if (currentTab === "captions") renderCaptions();
+        if (currentTab === "books") renderBooks();
+      });
+
+      clearBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        currentSearchTerm = "";
+        clearBtn.style.display = "none";
+        searchInput.focus();
+        if (currentTab === "captions") renderCaptions();
+        if (currentTab === "books") renderBooks();
+      });
+
+      // Daily Ayah Copy
+      document.getElementById("copyDailyAyahBtn").addEventListener("click", () => {
+        const text = `فَاذْكُرُونِي أَذْكُرْكُمْ وَاشْكُرُوا لِي وَلَا تَكْفُرُونِ\n\n"অতএব তোমরা আমাকে স্মরণ কর, আমিও তোমাদেরকে স্মরণ করব। আর তোমরা আমার প্রতি কৃতজ্ঞ হও এবং অকৃতজ্ঞ হয়ো না।"\n— সূরা আল-বাকারা: ১৫২\n\n[সংগৃহীত: ইসলামিক লাইব্রেরী]`;
+        copyToClipboard(text, "নির্বাচিত আয়াত ও অর্থ কপি হয়েছে! ✓");
+      });
+
+      // Tasbeeh interactive events
+      document.getElementById("tasbeehBtn").addEventListener("click", incrementTasbeeh);
+      document.getElementById("tasbeehResetBtn").addEventListener("click", resetTasbeeh);
+      document.getElementById("tasbeehChangeDuaBtn").addEventListener("click", changeTasbeehDua);
+      document.getElementById("tasbeehCopyDuaBtn").addEventListener("click", copyTasbeehDua);
+
+      // Modal close handlers
+      document.getElementById("closeModalBtn").addEventListener("click", closeBookModal);
+      document.getElementById("bookModal").addEventListener("click", (e) => {
+        if (e.target.id === "bookModal") closeBookModal();
+      });
+
+      // Theme toggle (Dark / Light)
+      const themeToggle = document.getElementById("themeToggle");
+      const savedTheme = localStorage.getItem("islamic_theme");
+      if (savedTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeToggle.innerText = "☀️";
+      }
+
+      themeToggle.addEventListener("click", () => {
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        if (isDark) {
+          document.documentElement.removeAttribute("data-theme");
+          themeToggle.innerText = "🌓";
+          localStorage.setItem("islamic_theme", "light");
+          showToast("লাইট থিম সক্রিয়");
+        } else {
+          document.documentElement.setAttribute("data-theme", "dark");
+          themeToggle.innerText = "☀️";
+          localStorage.setItem("islamic_theme", "dark");
+          showToast("ডার্ক থিম সক্রিয়");
+        }
+      });
+
+      // Share Website Button
+      document.getElementById("shareWebsiteBtn").addEventListener("click", () => {
+        shareContent(
+          "📖 ইসলামিক লাইব্রেরী - কুরআন, হাদিস, সীরাত কিতাব ও চমৎকার বাংলা ইসলামিক ক্যাপশন সংকলন। অনলাইনে ভিজিট করুন!",
+          "ইসলামিক লাইব্রেরী"
+        );
+      });
+    });
+  </script>
+</body>
+</html>
